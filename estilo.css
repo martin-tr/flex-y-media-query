@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: green;
+}
+
+
+
+.header{
+    background: pink;
+    color: black;
+    padding: 0.5em 3em; /* top y botton (0.5em) - left y rigth (3em) */
+    margin-bottom: 2em;/* 1em = 16px */
+    display: flex;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo{
+    width: 45%;
+    height: 30%; 
+}
+
+.banner{
+    padding: 1.5em;
+    display: flex;
+    justify-content: center;/* centrado */
+    margin-top: 0;
+}
+
+.navbar ul{
+    display: flex;
+    list-style-type: none;/* sacamos los estilos por default */
+}
+
+.navbar ul li{
+    padding: 1em;
+}
+
+
+#contenedor{
+    width: 90%;
+    background: rgb(177, 163, 163);
+    margin: 0 auto;
+    display: flex;/* metodologia flex */
+    justify-content: space-around;
+    flex-wrap: wrap; /* salto de linea */
+    flex-direction: row;/* por defecto */
+    padding: 20px;
+}
+
+#contenedor img{
+    width: 100%;
+}
+
+.primero{
+    background: rgb(224, 146, 146);
+    width: 30%;
+    padding: 2%; /* o puedo especificar cada uno - right, left, top, botton */
+    box-sizing: border-box;
+}
+
+.segundo{
+    background: rgb(165, 140, 223);
+    width: 30%;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.tercero{
+    background: rgb(134, 221, 156);
+    width: 30%;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.footer{
+    margin-top: 4em;
+    border-top: 5px solid white;
+    padding: 2em 3em;
+    display: flex; /* me distribuye en el espacio */
+    justify-content: space-between;/* acomoda automaticamente el espacio */
+    background: blanchedalmond;
+}
+.data{
+    background: beige;
+    padding: 2em;
+    color: black;
+    border-radius: 10%;
+}
+
+.map{
+    width: 20%;
+    
+}
+
+
+@media screen and (min-width: 660px) and (max-width:1200px){/* media query: punto de quiebre, donde cambia mi deseño segun el tamaño del dispositivo */
+
+    body{
+        background: rgb(112, 112, 110);
+    }  
+    .banner{
+        display: none;
+
+    } 
+} 
+
+/* puedo aplicar media query con todos los elementos de mi contenedor */
+
+@media screen and (min-width:600px) and (max-width:960){
+
+    body{
+        background: burlywood
+    }
+    header{
+         flex-wrap: wrap;
+    }
+    .logo{
+         width: 100%;
+         text-align: center;
+    }
+    .banner{ 
+    display: none;
+    }
+    .primero{
+        width: 100%;
+        padding: 2em;
+    }
+    .primero figure{
+        height: 250px;
+        overflow: hidden;/*  */
+    }
+    .segundo, .tercero{
+        width: 50%;
+        padding: 2em;
+    }
+    #contenedor article h2{
+        font-size: 2.2em;
+        
+    }
+    p{
+        font-size: 1.3em;
+    }
+
+
+
+}
+
